@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clinic Appointment Scheduler</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule Your Appointment</h1>
+        <form id="appointmentForm" onsubmit="showConfirmation(event)">
+            <label>Full Name:</label>
+            <input type="text" required>
+
+            <label>Email Address:</label>
+            <input type="email" required>
+
+            <label>Phone Number:</label>
+            <input type="tel" required>
+
+            <label>Appointment Date:</label>
+            <input type="date" required>
+
+            <label>Service Type:</label>
+            <select required>
+                <option value="">Select</option>
+                <option>General Consultation</option>
+                <option>Dental Checkup</option>
+                <option>Physical Therapy</option>
+            </select>
+
+            <label>Additional Notes:</label>
+            <textarea rows="4"></textarea>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+        <div class="confirmation" id="confirmationMessage" style="display: none;">
+            ✅ Your appointment has been scheduled! Thank you!
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
